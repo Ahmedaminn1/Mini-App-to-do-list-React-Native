@@ -1,56 +1,72 @@
-# Welcome to your Expo app 👋
+# 📝 React Native To-Do App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A clean, responsive, and robust To-Do List application built with **React Native**, **Expo**, and **TypeScript**. Recently refactored using clean code architecture principles to ensure maintainability, testability, and high performance.
 
-## Get started
+## ✨ Features
 
-1. Install dependencies
+- **Add & Edit Tasks**: Easily add new tasks and modify existing ones.
+- **Status Tracking**: Mark tasks as Pending or Completed with a single tap.
+- **Clean UI/UX**: Minimalist interface optimized for both iOS and Android.
+- **Clear All**: Convenient option to delete all tasks when you're caught up.
+- **Modular Architecture**: 
+  - `useTodos` custom hook for isolated state & business logic.
+  - Component-driven UI (`TodoHeader`, `TodoForm`, `TodoItem`).
+  - Extracted mock data and constants for clean orchestrator (`index.tsx`).
 
+## 🛠️ Tech Stack
+
+- **Framework**: [React Native](https://reactnative.dev/)
+- **Toolchain**: [Expo](https://expo.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Routing**: [Expo Router](https://docs.expo.dev/router/introduction/) (File-based routing)
+
+## 🚀 Getting Started
+
+### Prerequisites
+Make sure you have Node.js installed, along with `npm` or `yarn`.
+
+### Installation
+
+1. **Clone the repository** (if you haven't already):
+   ```bash
+   git clone https://github.com/Ahmedaminn1/Mini-App-to-do-list-React-Native.git
+   cd "Mini App to-do-list React Native/to-do-app"
+   ```
+
+2. **Install dependencies**:
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. **Start the development server**:
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. **Open the App**:
+   - Install the **Expo Go** app on your iOS or Android device.
+   - Scan the QR code generated in your terminal or browser.
+   - Alternatively, press `a` for Android Emulator or `i` for iOS Simulator.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📂 Project Structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+src/
+├── app/
+│   └── index.tsx              # Main UI screen orchestrator
+├── components/
+│   └── todo/                  # Isolated presentation components
+│       ├── todo-form.tsx      
+│       ├── todo-header.tsx    
+│       └── todo-item.tsx      
+├── constants/
+│   ├── initial-todos.ts       # Extracted static mock data
+│   └── theme.ts               # Design tokens (colors, spacing, typography)
+├── hooks/
+│   └── use-todos.ts           # Centralized business logic & state
+└── types/
+    └── todo.ts                # TypeScript interfaces
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
